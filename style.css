@@ -45,16 +45,18 @@ body {
 
 .main {
     padding-left: 150px;
+    font-size: 42px;
 }
 
 .main-title {
-    font-size: 182px;
+    font-size: clamp(5rem, 10vw, 18rem);
     text-transform: uppercase;
     color: #fff;
+    padding-top: 100px;
     line-height: 1;
 }
 .main-description {
-    font-size: 42px;
+    font-size: clamp(1.5rem, 2.5vw, 2rem );
     font-weight: bold;
     color: #fff; 
     line-height: 1;  
