@@ -27,14 +27,20 @@ body {
     float: right;
     margin-right: 50px;
 }
-.top-nav > a {
+.top-nav > .side-nav > a {
     text-decoration: none;
     margin-right: 50px;
     font-size: 24px;
     font-weight: bold;
     color: #fff;
 }
+.btn-close, .open-slide {
+    display: none;
+}
 .search {
+    position: absolute;
+    right: 45px;
+    top: 50px;
     font-size: 18px;
     background-color: #fff;
     padding: 13px 13px;
@@ -102,4 +108,64 @@ body {
     color: #fff;
     font-size: 18px;
     margin-right: 200px;
+}
+
+@media (max-width: 450px) {
+    .container {
+        padding: 10px;
+    }
+
+    .btn-close, .open-slide {
+        display: inline-block;
+    }
+    .top-nav > .side-nav > .btn-close {
+        font-size: 24px;
+        margin-top: 0;
+    }
+    .side-nav {
+        background-color: #fff;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        height: 30vh;
+        overflow-x: hidden;
+        z-index: 1;
+        transition-duration: 0.4s;
+    }
+    .top-nav > .side-nav > a {
+        font-size: 16px;
+        color: #000;
+        display: block;
+        margin: 10px 5px;
+    }
+    .open-slide {
+        position: absolute;
+        top: 15px;
+        right: 65px;
+    }
+    .search {
+        position: absolute;
+        right: 5px;
+        top: 10px;
+    }
+
+    .main-title, .main-description {
+        padding: 0 25px;
+    }
+
+    .title-date {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border: 0;
+        border-bottom: 2px solid #fff;
+    }
+
+    .social-links {
+        float: none;
+    }
+    .social-links > a:last-child {
+        margin-right: 0;
+    }
 }

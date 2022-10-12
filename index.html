@@ -12,12 +12,28 @@
     <header class="container">
         <img class="logo" src="./img/logo.png" alt="Tokyo logo">
         <nav class="top-nav">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Service</a>
-            <a href="#">Package</a>
-            <a href="#">Contact</a>
+            <div id="side-menu" class="side-nav">
+                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Service</a>
+                <a href="#">Package</a>
+                <a href="#">Contact</a>
+            </div>
             <i class="fa-solid fa-magnifying-glass search"></i>
+
+            <span class="open-slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <svg width="30" height="30">
+                        <path d="M0,5 30,5" stroke="#fff"
+                        stroke-width="5"/>
+                        <path d="M0,14 30,14" stroke="#fff"
+                        stroke-width="5"/>
+                        <path d="M0,23 30,23" stroke="#fff"
+                        stroke-width="5"/>
+                    </svg>
+                </a>
+            </span>
         </nav>
     </header>
     <main class="container main">
@@ -45,5 +61,16 @@
         </div>
 
     </footer>
+
+    <script>
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width ='80px';
+        }
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width ='0';
+        }
+        
+    </script>
+
 </body>
 </html>
